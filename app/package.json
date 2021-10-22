@@ -1,0 +1,10 @@
+{
+    "name": "docker_web_app",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1"
+    }
+  }
