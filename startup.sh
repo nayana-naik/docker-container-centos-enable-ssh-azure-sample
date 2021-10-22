@@ -4,8 +4,6 @@
 eval $(printenv | sed -n "s/^\([^=]\+\)=\(.*\)$/export \1=\2/p" | sed 's/"/\\\"/g' | sed '/=/s//="/' | sed 's/$/"/' >> /etc/profile)
 
 # Start the SSH Service
-echo "Starting SSH ..."
-systemctl start sshd
-
-# Start node
+echo "Starting SSH & Node"
+/usr/sbin/sshd -D&
 npm start
